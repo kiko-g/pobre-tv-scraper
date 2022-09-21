@@ -18,7 +18,7 @@ const socials: Social[] = [
 
 export default function Footer() {
   return (
-    <footer className="mt-8 bg-navy px-2 py-2 transition dark:bg-darker md:px-3 md:py-4">
+    <footer className="mt-8 bg-lightNavy px-2 py-2 transition dark:bg-darkest md:px-3 md:py-4">
       <div className="flex flex-col items-center justify-between space-y-4 lg:flex-row lg:space-y-0">
         <ul className="mt-4 flex items-center justify-center space-x-4 sm:mt-0">
           {socials.map((social, socialIdx) => (
@@ -35,7 +35,7 @@ export default function Footer() {
           ))}
         </ul>
 
-        <div className="flex flex-col items-end justify-center text-base text-white dark:text-gray-300 sm:text-center">
+        <div className="flex flex-col items-center justify-center text-base text-white dark:text-gray-300 sm:text-center lg:items-end">
           <p>
             © 2022{' '}
             <a

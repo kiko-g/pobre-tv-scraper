@@ -45,19 +45,16 @@ export default function Header({ siteTitle, location }: Props) {
               <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-between">
                 <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
                   <Link href="/">
-                    <div className="flex items-center space-x-2">
+                    <button className="flex items-center space-x-2">
                       <Image
                         src={Logo}
                         alt="PTVL"
-                        className="z-20 inline-flex h-6 w-auto rounded-full transition dark:hidden"
-                      />
-                      <Image
-                        src={Logo}
-                        alt="PTVL"
-                        className="z-20 hidden h-6 w-auto rounded-full transition dark:inline-flex"
+                        className="z-20 inline-flex rounded-full transition"
+                        height={32}
+                        width={32}
                       />
                       <h3 className="text-xs font-semibold tracking-tighter duration-150 lg:text-base">{siteTitle}</h3>
-                    </div>
+                    </button>
                   </Link>
                 </div>
 
@@ -114,15 +111,26 @@ const Hamburger = ({ open }: HamburgerProps) => (
     }`}
   >
     <Link href="/">
-      {open ? (
-        <Image
-          className="top-0.5 h-5 w-auto rounded-full transition hover:opacity-80 dark:inline-flex md:hidden"
-          src={Logo}
-          alt="PTVL"
-        />
-      ) : (
-        <Image className="h-6 w-auto rounded-full transition hover:opacity-80 md:hidden" src={Logo} alt="PTVL" />
-      )}
+      <button className="flex items-center justify-center">
+        {open ? (
+          <Image
+            className="rounded-full transition hover:opacity-80 dark:inline-flex md:hidden"
+            layout="fixed"
+            src={Logo}
+            alt="PTVL"
+            height={32}
+            width={32}
+          />
+        ) : (
+          <Image
+            className="rounded-full transition hover:opacity-80 md:hidden"
+            src={Logo}
+            alt="PTVL"
+            height={32}
+            width={32}
+          />
+        )}
+      </button>
     </Link>
 
     <div className="flex items-center space-x-1">
