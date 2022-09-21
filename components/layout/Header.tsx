@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import DarkModeSwitch from './DarkModeSwitch'
 import { Logo } from '../../images/index'
 import { Disclosure } from '@headlessui/react'
@@ -45,12 +46,12 @@ export default function Header({ siteTitle, location }: Props) {
                 <div className="relative hidden h-auto space-x-12 self-center duration-200 hover:opacity-75 md:inline-flex">
                   <Link href="/">
                     <div className="flex items-center space-x-2">
-                      <img
+                      <Image
                         src={Logo}
                         alt="PTVL"
                         className="z-20 inline-flex h-6 w-auto rounded-full transition dark:hidden"
                       />
-                      <img
+                      <Image
                         src={Logo}
                         alt="PTVL"
                         className="z-20 hidden h-6 w-auto rounded-full transition dark:inline-flex"
@@ -114,13 +115,13 @@ const Hamburger = ({ open }: HamburgerProps) => (
   >
     <Link href="/">
       {open ? (
-        <img
+        <Image
           className="top-0.5 h-5 w-auto rounded-full transition hover:opacity-80 dark:inline-flex md:hidden"
           src={Logo}
           alt="PTVL"
         />
       ) : (
-        <img className="h-6 w-auto rounded-full transition hover:opacity-80 md:hidden" src={Logo} alt="PTVL" />
+        <Image className="h-6 w-auto rounded-full transition hover:opacity-80 md:hidden" src={Logo} alt="PTVL" />
       )}
     </Link>
 
